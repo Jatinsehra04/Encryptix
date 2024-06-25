@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-color: black;
+        }
+        header{
+            height: 60px;
+            width: 1400px;
+            margin: auto;
+            border-radius: 30px;
+            background-color: rgb(37, 33, 33);
+           margin-top: 10px;
+        }
+        .navbar{
+            display: grid;
+            grid-template-columns: 100px 600px repeat(6 , auto);
+        }
+        .Logo{
+          margin: auto;
+        }
+        .Logo img{
+            width: 55px;
+            height: 55px;
+            justify-content: center;
+            border-radius: 30px;   
+        }
+        .Title{
+            align-content: center;
+            font-size: 2rem;
+            color: aqua;
+        }
+        .navbar-list{
+            align-content: center;
+            font-size: 1.7rem;
+        }
+        .navbar-list a{
+            color: white;
+            text-decoration: none;
+        }
+        .section-list-1{
+            display: grid;
+            width: 1200px;
+            margin: auto;
+            grid-gap: 3.125rem;
+            grid-template-areas:
+            'item-1 item-2'
+            'item-1 item-3';
+            margin-top: 30px;
+        }
+        #section-item-1{
+            grid-area: item-1;
+            text-align: center;
+            color: white;
+            font-size: 3.2rem;
+        }
+        #section-item-2{
+            grid-area: item-2;
+            text-align: center;
+            color: white;
+            font-size: 1.6rem;
+        }
+        #section-item-3{
+            grid-area: item-3;
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            width: 250px;
+            height: 50px;
+            background-color: blue;
+            border-radius: 25px;
+            align-content: center;
+        }
+        #section-item-3 a{
+            color: white;
+            text-decoration: none;
+        }
+        .section-list-2{
+           width: fit-content;
+           margin: auto;
+        }
+        .section-list-2 img{
+            margin-top: 40px;
+            width: 1200px;
+            height: 550px;
+            border-radius: 20px;
+            margin-bottom: 50px;
+        }
+        .section-list-2{
+            margin: auto;
+        }
+        .section-list-5{
+            display: grid;
+            grid-gap: 4.1rem;
+            grid-template-areas: 
+            'Membership Membership Membership Membership'
+            'Basic Standard Professional Family';
+            width: 1200px;
+            margin: auto;
+            margin-top: 30px;
+        h1{
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+        h3{
+            font-size: 1.2rem;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        p{
+            margin-top: 8px; 
+        }
+        }
+        #Membership{
+            grid-area: Membership;
+            color: white;
+            text-align: center;
+        }
+        #Basic{
+            grid-area: Basic;
+            color: white;
+            text-align: center; 
+            font-size: 1rem;
+            width: 250px;
+            border-radius: 20px;
+            background-color: rgb(31, 19, 19);
+        }
+        #Standard{
+            grid-area: Standard;
+            color: white;
+            text-align: center;
+            font-size: 1rem;
+            width: 250px;
+            border-radius: 20px;
+            background-color: rgb(31, 19, 19);
+        }
+        #Professional{
+            grid-area: Professional;
+            color: white;
+            text-align: center;
+            font-size: 1rem;
+            width: 250px;
+            border-radius: 20px;
+            background-color: rgb(31, 19, 19);
+        }
+        #Family{
+            grid-area: Family;
+            color: white;
+            text-align: center;
+            font-size: 1rem;
+            width: 250px;
+            border-radius: 20px;
+            background-color: rgb(31, 19, 19);
+        }
+        #Join_Now{
+            width: 125px;
+            height: 30px;
+            margin: auto;
+            border-radius: 25px;
+            background-color: blue;
+            margin-top: 12px;
+            margin-bottom: 5px; 
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: 1.5rem;
+            }
+        }
+        .section-list-3{
+            display: grid;
+            grid-gap: 2rem;
+            grid-template-areas: 
+            'WhyChooseUs'
+            'section-list-4';
+            background-color: rgb(31, 19, 19);
+        }
+        #WhyChooseUs{
+           grid-area: WhyChooseUs;
+           color: white;
+           width: 500px;
+           margin: auto;
+           text-align: center;
+           font-size: 1.5rem;
+           h1{
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+        p{
+            font-size: 1rem;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        }
+        .section-list-4{
+            grid-area: section-list-4;
+            display: grid;
+            grid-gap: 3rem;
+            background-color: rgb(37, 33, 33);
+            border-radius: 25px;
+            margin-bottom: 30px;
+            grid-template-areas: 
+            'BestTraining ExperienceTrainers Image-2'
+            'ModernEquipment AwardWinners Image-2';
+            width: 1200px;
+            height: 400px;
+            margin: auto;
+            h1{
+            font-size: 2rem;
+            margin-top: 15px;
+        }
+        p{
+            font-size: 1rem;
+            margin-top: 10px;
+            margin-top: 20px;
+        }
+        }
+        #BestTraining{
+            grid-area: BestTraining;
+            color: white;
+            text-align: center;
+        }
+        #ModernEquipment{
+            grid-area: ModernEquipment;
+            color: white;
+            text-align: center;
+        }
+        #ExperienceTrainers{
+            grid-area: ExperienceTrainers;
+            color: white;
+            text-align: center;
+        }
+        #AwardWinners{
+            grid-area: AwardWinners;
+            color: white;
+            text-align: center;
+        }
+        #Image-2{
+            grid-area: Image-2;
+        }
+        #Image-2 img{
+            width: 300px;
+            height: 400px;
+           border-top-right-radius: 25px;
+           border-bottom-right-radius: 25px;
+        }
+        .footer-list-1{
+            display: grid;
+            grid-template-areas: 
+            'social-media Company Category Contact';
+            grid-gap: 5rem;
+            width: 1400px;
+            margin: auto;
+            color: white;
+            margin-top: 50px;
+        }
+        #social-media{
+            grid-area: social-media;
+            text-align: left;
+            h1{
+                font-size: 2rem;
+                margin-top: 20px;
+            }
+            pre{
+                font-size: 1.2rem;
+                margin-top: 15px;
+                margin-bottom: 20px;
+            }
+        }
+        #Company{
+            grid-area: Company;
+            text-align: left;
+            h1{
+                font-size: 1.8rem;
+                margin-top: 20px;
+            }
+            p{
+                font-size: 1.2rem;
+                margin-top: 15px;
+                margin-bottom: 20px;
+            }
+        }
+        #Category{
+            grid-area: Category;
+            text-align: left;
+            h1{
+                font-size: 1.8rem;
+                margin-top: 20px;
+            }
+            p{
+                font-size: 1.2rem;
+                margin-top: 15px;
+                margin-bottom: 20px;
+            }
+        }
+        #Contact{
+            grid-area: Contact;
+            text-align: left;
+            img{
+                width: 20px;
+                height: 20px;
+                }
+            h1{
+                font-size: 1.8rem;
+                margin-top: 20px;
+            }
+            p{
+                font-size: 1.2rem;
+                margin-top: 15px;
+                margin-bottom: 20px;
+            }
+            pre{
+                font-size: 1.2rem;
+                margin-top: 15px;
+                margin-bottom: 20px;
+            }
+        }
+        .footer-list-2{
+            color: white;
+            display: flex;
+            flex-direction: row;
+            width: 377px;
+            margin: auto;
+            gap: 5rem;
+            text-align: center;
+            p{
+                font-size: 1rem;
+                margin-top: 15px;
+                margin-bottom: 20px;
+            }
+        }
+        footer{
+            background-color: rgb(37, 33, 33);
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+           <div class="Logo">
+            <img src="logo.jpg" alt="">
+           </div>
+           <div class="Title">
+            <p>GYMNASTIC</p>
+           </div>
+           <div class="navbar-list">
+            <a href="#">Home</a>
+           </div>
+           <div class="navbar-list">
+            <a href="#">Class</a>
+           </div>
+           <div class="navbar-list">
+            <a href="#">Membership</a>
+           </div>
+           <div class="navbar-list">
+            <a href="#">Trainers</a>
+           </div>
+           <div class="navbar-list">
+            <a href="#">Blog</a>
+           </div>
+           <div class="navbar-list">
+            <a href="#">Contact</a>
+           </div>
+        </nav>
+    </header>
+    <section>
+        <div class="section-list-1">
+            <p id="section-item-1">
+                Take care of your body and it's the only place you have to live
+            </p>
+            <p id="section-item-2">
+                Gym session or brisk walk can help. Physical activity stimulates many brain chemicals that may leave you.
+            </p>
+            <p id="section-item-3">
+                <a href="" target="">
+                    Be a Member
+                </a>
+            </p>
+        </div>
+        <div class="section-list-2" id="Image-1">
+            <img src="couple-training-together-gym (1).jpg" alt="">
+        </div>
+        <div class="section-list-3">
+            <div id="WhyChooseUs">
+                <h1>Why Choose Us</h1>
+            <p>When picking a gym, consider its amenities like guest access, hours, location, and extra benefits to enhance your experience.</p>
+            </div>
+            <div class="section-list-4">
+                <div id="BestTraining">
+                    <h1>Best Training</h1>
+                    <p>
+                        The best training is the one that transforms knowledge into action, turning potential into proficiency, and challenges into opportunities for growth.
+                    </p>
+                </div>
+                <div id="ModernEquipment">
+                    <h1>Modern Equipment</h1>
+                    <p>
+                        Modern gym equipment combines innovative design and advanced functionality to optimize workouts, ensuring effective training and superior results for fitness enthusiasts.
+                    </p>
+                </div>
+                <div id="ExperienceTrainers">
+                    <h1>Experience Trainers</h1>
+                    <p>
+                        Experienced trainers bring a wealth of knowledge, motivation, and personalized guidance to the gym, empowering clients to achieve their fitness goals with confidence and precision.
+                    </p>
+                </div>
+                <div id="AwardWinners">
+                    <h1>Award Winners</h1>
+                    <p>
+                        Award-winning gym facilities boast excellence in equipment, programming, and customer service, setting the standard for fitness excellence and client satisfaction.
+                    </p>
+                </div>
+                <div id="Image-2">
+                    <img src="charles-gaudreault-xXofYCc3hqc-unsplash.jpg" alt="#">
+                </div>
+            </div>
+        </div>
+        <div class="section-list-5">
+            <div id="Membership">
+                <h1>Membership</h1>
+                <p></p>
+            </div>
+            <div id="Basic">
+                <h1>Basic</h1>
+                <h3>$20/Month</h3>
+                <hr>
+                <p>Gym without Trainers</p>
+                <p>Unlimited Access</p>
+                <p>Access to all Clubs</p>
+                <p>Training for all Classes</p>
+                <p>Excusive Studio</p>
+                <p>Additional Session</p>
+                <p id="Join_Now">
+                    <a href="#">Join Now</a>
+                </p>
+            </div>
+            <div id="Standard">
+                <h1>Standard</h1>
+                <h3>$35/Month</h3>
+                <hr>
+                <p>Gym without Trainers</p>
+                <p>Unlimited Access</p>
+                <p>Access to all Clubs</p>
+                <p>Training for all Classes</p>
+                <p>Excusive Studio</p>
+                <p>Additional Session</p>
+                <p id="Join_Now">
+                    <a href="#">Join Now</a>
+                </p></div>
+            <div id="Professional">
+                <h1>Professional</h1>
+                <h3>$50/Month</h3>
+                <hr>
+                <p>Gym without Trainers</p>
+                <p>Unlimited Access</p>
+                <p>Access to all Clubs</p>
+                <p>Training for all Classes</p>
+                <p>Excusive Studio</p>
+                <p>Additional Session</p>
+                <p id="Join_Now">
+                    <a href="#">Join Now</a>
+                </p></div>
+            <div id="Family">
+                <h1>Family</h1>
+                <h3>$65/Month</h3>
+                <hr>
+                <p>Gym without Trainers</p>
+                <p>Unlimited Access</p>
+                <p>Access to all Clubs</p>
+                <p>Training for all Classes</p>
+                <p>Excusive Studio</p>
+                <p>Additional Session</p>
+                <p id="Join_Now">
+                    <a href="#">Join Now</a>
+                </p></div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-list-1">
+            <div id="social-media">
+                <h1>GYMNASTIC</h1>
+                <pre>This top-tier fitness club comes at a hefty
+monthly cast but offers the best of the best.
+you'll find state-of-the-art equipment.</pre>
+                <p>
+                    <a href="#">
+
+                    </a>
+                    <a href="#">
+
+                    </a>
+                    <a href="#">
+
+                    </a>
+                    <a href="#">
+
+                    </a>
+                </p>
+            </div>
+            <div id="Company">
+                <h1>Company</h1>
+                    <p>Home</p>
+                    <p>Class</p>
+                    <p>Membership</p>
+                    <p>Trainers</p>
+                    <p>Blog</p>
+            </div>
+            <div id="Category">
+                <h1>Category</h1>
+                    <p>Strength Training</p>
+                    <p>Body Building</p>
+                    <p>Weight Lost</p>
+                    <p>Basic Yoga</p>
+                    <p>Physical Fitness</p>
+            </div>
+            <div id="Contact">
+                <h1>Contact</h1>
+                <p><img src="phone-call.png" alt=""> +971 50 461 7277</p>
+                <p><img src="social.png" alt=""> info@domain.com</p>
+                <pre><img src="location.png" alt=""> Warehouse4, 5th Street,
+  Al Quoz, Al Quoz 3, Dubai</pre>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-list-2">
+            <p>2023 Gymnastic</p>
+            <p>Terms of Use | Privacy Policy</p>
+        </div>
+    </footer>
+</body>
+</html>
